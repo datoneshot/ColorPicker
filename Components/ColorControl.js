@@ -23,7 +23,7 @@ export default class ColorControl extends Component {
                     // this.setState({value: val});
                     this.props.onValueChanged(val);
                 }}/>
-                <TextInput value={`${this.state.value}`} style={styles.textInput} />
+                <TextInput value={`${this.props.value}`} style={styles.textInput} />
             </View>
         );
     }

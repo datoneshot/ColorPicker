@@ -39,19 +39,13 @@ export default class App extends PureComponent {
           <View style={{ width: 300, height: 350 }}>
             <View style={{ flex: 1 }}>
               <ColorControl title='R' value={this.state.red} onValueChanged={(val) => {
-                const currentColors = this.state;
-                const newColor = {...currentColors, red: val};
-                this.onSliderValueChanged(newColor);
+                this.setState({red: val});
               }} />
               <ColorControl title='G' value={this.state.green} onValueChanged={(val) => {
-                const currentColors = this.state;
-                const newColor = {...currentColors, green: val};
-                this.onSliderValueChanged(newColor);
+                this.setState({green: val});
               }} />
               <ColorControl title='B' value={this.state.blue} onValueChanged={(val) => {
-                const currentColors = this.state;
-                const newColor = {...currentColors, blue: val};
-                this.onSliderValueChanged(newColor);
+                this.setState({blue: val});
               }} />
             </View>
             <View style={{ flex: 1, backgroundColor: `rgb(${this.state.red}, ${this.state.green}, ${this.state.blue})` }}>

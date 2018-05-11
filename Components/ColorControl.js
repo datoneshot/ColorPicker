@@ -11,19 +11,19 @@ import {
 export default class ColorControl extends Component {
     constructor(props) {
         super(props);
-        // this.state = props;
+        this.state = props;
     }
 
     render() {
         return (
             <View style={styles.rowItem}>
-                <Text>{this.props.title}</Text>
-                <Slider style={styles.slider} minimumValue={0} maximumValue={255} value={this.props.value} step={1}
+                <Text>{this.state.title}</Text>
+                <Slider style={styles.slider} minimumValue={0} maximumValue={255} value={this.state.value} step={1}
                 onValueChange={(val) => {
                     // this.setState({value: val});
                     this.props.onValueChanged(val);
                 }}/>
-                <TextInput value={`${this.props.value}`} style={styles.textInput} />
+                <TextInput value={`${this.state.value}`} style={styles.textInput} />
             </View>
         );
     }
